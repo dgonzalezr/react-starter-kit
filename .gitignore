@@ -1,0 +1,24 @@
+# OS
+#
+.vs
+.vscode
+.DS_Store
+.definitions
+
+# dependencies
+#
+node_modules
+
+# folders
+#
+log
+dist
+
+# node
+#
+npm-debug.log*
+package-lock.json
+yarn-debug.log*
+yarn-error.log*
+yarn\.lock
+
