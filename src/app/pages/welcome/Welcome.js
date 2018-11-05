@@ -5,23 +5,19 @@ import styled from 'styled-components';
 import ReactLogo from 'assets/images/reactjs_logo.svg';
 
 /** Welcome Page */
-class Welcome extends Component {
-    render() {
-        return (
-            <Container>
-                <Header>
-                    <Logo src={ReactLogo} />
-                    <Title>Welcome to React</Title>
-                </Header>
-                <Intro>
-                    To get started, edit <br />
-                    <Code>pages/welcome/Welcome.js</Code> <br />
-                    and save to reload.
-                </Intro>
-            </Container>
-        );
-    }
-}
+const Welcome = () => (
+    <Container>
+        <Header>
+            <Logo src={ReactLogo} />
+            <Title>Welcome to React</Title>
+        </Header>
+        <Intro>
+            To get started, edit <br />
+            <Code>pages/welcome/Welcome.js</Code> <br />
+            and save to reload.
+        </Intro>
+    </Container>
+);
 
 export { Welcome };
 

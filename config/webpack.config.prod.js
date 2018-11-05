@@ -2,22 +2,22 @@ const fs = require('fs');
 const path = require('path');
 const merge = require('webpack-merge');
 
-/*=============================================
-=            PLUGINS                          =
-=============================================*/
-// const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+/** Plugins */
+// $FlowFixMe: There's no type definition for this npm package yet
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const Visualizer = require('webpack-visualizer-plugin');
+// const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-/*----------  Importing Base Webpack  ----------*/
+/** Importing Base Webpack */
 const baseConfig = require('./webpack.config.base');
 
-/*----------  Helper  ----------*/
+/** Helper */
 const resolveApp = relativePath => path.resolve(fs.realpathSync(process.cwd()), relativePath);
 
 const prodConfiguration = env =>
     merge([
         {
+            mode: 'production',
             output: {
                 // The build folder.
                 path: resolveApp('dist'),
@@ -29,7 +29,7 @@ const prodConfiguration = env =>
                 // publicPath: publicPath,
                 // Point sourcemap entries to original disk location (format as URL on Windows)
                 devtoolModuleFilenameTemplate: info =>
-                    path.relative(paths.appSrc, info.absoluteResourcePath).replace(/\\/g, '/')
+                    path.relative(resolveApp('src'), info.absoluteResourcePath).replace(/\\/g, '/')
             },
             optimization: {
                 runtimeChunk: 'single',

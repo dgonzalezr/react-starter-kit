@@ -1,11 +1,12 @@
 /** NPM DEPENDENCIES */
-import React, { Component } from 'react';
+import * as React from 'react';
+import { hot } from 'react-hot-loader';
 import { createGlobalStyle } from 'styled-components';
 
 /** Application global style */
 const GlobalStyle = createGlobalStyle`
     body {
-        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+        font-family: -apple-system,BlinkMacSystemFont,Montserrat,Segoe UI,Roboto,Helvetica Neue,sans-serif;
         font-size: 1rem;
         margin: 0;
         padding: 0;
@@ -15,8 +16,12 @@ const GlobalStyle = createGlobalStyle`
 /** Application Pages */
 import { Welcome } from 'app/pages/welcome';
 
+/** Flow type definitions */
+type Props = {};
+type State = {};
+
 /** Main APP */
-class App extends Component {
+class App extends React.Component<Props, State> {
     render() {
         return (
             <React.Fragment>
@@ -27,4 +32,9 @@ class App extends Component {
     }
 }
 
-export { App };
+/**
+ * README: For preserving component states, take a look at:
+ * Step 3 (of 3): Adding React Hot Loader to preserve component state
+ * http://gaearon.github.io/react-hot-loader/getstarted/
+ */
+export default hot(module)(App);

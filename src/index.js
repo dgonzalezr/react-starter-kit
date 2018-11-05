@@ -3,12 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 /** Importing Main APP */
-import { App } from './app';
+import App from './app';
 
-console.log('process.env.VERSION', process.env.VERSION);
-console.log('process.env.PLATFORM', process.env.PLATFORM);
-console.log('process.env.NODE_ENV', process.env.NODE_ENV);
-console.log('process.env.PUBLIC_URL', process.env.PUBLIC_URL);
+/** Grab the Container Element where the app is going to be rendered */
+const AppContainer: ?Element = document.getElementsByClassName('viewport')[0];
 
-/** Rendering APP */
-ReactDOM.render(<App />, document.getElementsByClassName('viewport')[0]);
+if (AppContainer) {
+    /** Rendering APP */
+    ReactDOM.render(<App />, AppContainer);
+}
