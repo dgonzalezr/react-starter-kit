@@ -9,6 +9,6 @@ import App from './app';
 const AppContainer: ?Element = document.getElementsByClassName('viewport')[0];
 
 if (AppContainer) {
-    /** Rendering APP */
-    ReactDOM.render(<App />, AppContainer);
+  /** Rendering APP */
+  ReactDOM.render(<App />, AppContainer);
 }

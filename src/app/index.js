@@ -5,12 +5,12 @@ import { createGlobalStyle } from 'styled-components';
 
 /** Application global style */
 const GlobalStyle = createGlobalStyle`
-    body {
-        font-family: -apple-system,BlinkMacSystemFont,Montserrat,Segoe UI,Roboto,Helvetica Neue,sans-serif;
-        font-size: 1rem;
-        margin: 0;
-        padding: 0;
-    }
+  body {
+    font-family: -apple-system,BlinkMacSystemFont,Montserrat,Segoe UI,Roboto,Helvetica Neue,sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 /** Application Pages */
@@ -22,14 +22,14 @@ type State = {};
 
 /** Main APP */
 class App extends React.Component<Props, State> {
-    render() {
-        return (
-            <React.Fragment>
-                <GlobalStyle />
-                <Welcome />
-            </React.Fragment>
-        );
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <GlobalStyle />
+        <Welcome />
+      </React.Fragment>
+    );
+  }
 }
 
 /**
