@@ -1,10 +1,12 @@
+// @flow
+
 /** NPM DEPENDENCIES */
-import React, { Component } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 /** ASSETS */
 import ReactLogo from 'assets/images/reactjs_logo.svg';
 
-/** Welcome Page */
+/** Welcome Screen */
 const Welcome = () => (
   <Container>
     <Header>
@@ -21,32 +23,32 @@ const Welcome = () => (
 
 export { Welcome };
 
-/** Styled Welcome Page Components */
-const Container = styled.div`
+/** Styled Components */
+const Container: React.ComponentType<{}> = styled.div`
   text-align: center;
 `;
 
-const Header = styled.header`
+const Header: React.ComponentType<{}> = styled.header`
   background-color: #000;
   padding: 1em 0;
 `;
 
-const Logo = styled.img`
+const Logo: React.ComponentType<{}> = styled.img`
   color: #fff;
   height: 96px;
   width: auto;
 `;
 
-const Title = styled.h1`
+const Title: React.ComponentType<{}> = styled.h1`
   color: #fff;
   font-size: 1.75rem;
 `;
 
-const Intro = styled.p`
+const Intro: React.ComponentType<{}> = styled.p`
   color: #212121;
 `;
 
-const Code = styled.code`
+const Code: React.ComponentType<{}> = styled.code`
   color: #f44336;
   font-size: 1.2rem;
 `;
