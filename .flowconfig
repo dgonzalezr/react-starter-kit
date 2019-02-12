@@ -1,7 +1,11 @@
 [ignore]
+; Ignore node_modules
 .*/node_modules/.*
-.*/src/\(assets\)/.*
+
+; Ignore config
 .*/config/.*
+
+; Ignore build and dist
 .*/build/.*
 .*/dist/.*
 
@@ -14,7 +18,7 @@
 [lints]
 
 [options]
-all=true
+emoji=true
 
 module.name_mapper='^app' ->'<PROJECT_ROOT>/src/app'
 module.name_mapper='^assets' ->'<PROJECT_ROOT>/src/assets'
@@ -28,5 +32,3 @@ esproposal.class_instance_fields=enable
 
 suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe
 suppress_comment=\\(.\\|\n\\)*\\$FlowIssue
-
-[strict]
